@@ -8,7 +8,8 @@ public class PlayerBattle : MonoBehaviour
     {
         if (collision.gameObject.tag == "enemy")
         {
-            Debug.Log("Touching an enemy");
+            DontDestroyOnLoad(this.gameObject);
+            DontDestroyOnLoad(collision.gameObject);
         }
     }
 }
